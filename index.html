@@ -1,103 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35LNB8Z8XR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-35LNB8Z8XR');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ForgeHub — моды Minecraft 1.20.1 Forge</title>
-    <meta name="description" content="ForgeHub — подборка лучших модов для Minecraft 1.20.1 Forge. Регулярные обновления и проверенные версии.">
-
-    <meta name="google-site-verification" content="gGVeJDT8HP0qg6FRoAZ3gRSk2P9RhwPya7218tIrBfA" />
-    <meta name="google-site-verification" content="znDc-Z57Ausrk14-n7Iies" />
-
+    <title>Топ-5 Модов 1.20.1 Forge</title>
     <style>
-    :root {
-        --bg: #0d1117;
-        --card: #161b22;
-        --accent: #58a6ff;
-        --green: #238636;
-        --text: #e6edf3;
-        --muted: #8b949e;
-        --border: #30363d;
-    }
-    * { box-sizing: border-box; }
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', system-ui, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-    }
-    header {
-        padding: 50px 20px;
-        text-align: center;
-        border-bottom: 2px solid var(--accent);
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2.4rem;
-        color: var(--accent);
-        letter-spacing: 2px;
-    }
-    .container {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 0 20px;
-    }
-    .mod-card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 25px;
-        margin-bottom: 25px;
-        transition: 0.25s;
-    }
-    .mod-card:hover {
-        border-color: var(--accent);
-        transform: translateY(-3px);
-    }
-    .btn {
-        padding: 12px 22px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        background: var(--green);
-        color: white;
-        display: inline-block;
-    }
-    footer {
-        text-align: center;
-        padding: 40px;
-        opacity: 0.4;
-    }
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --accent: #58a6ff;
+            --green: #238636;
+            --text: #e6edf3;
+            --border: #30363d;
+            --grass: #559028;
+            --dirt: #79553a;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        
+        .mc-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--dirt);
+            position: relative;
+            margin: 0 auto 15px;
+            border: 3px solid #000;
+            box-shadow: inset 0 10px 0 var(--grass);
+        }
+        .mc-icon::after {
+            content: '';
+            position: absolute;
+            top: 10px; left: 0; width: 100%; height: 5px;
+            background: #467520;
+        }
+
+        header { background: #161b22; padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { color: var(--accent); margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        
+        .mod-card { 
+            background: var(--card); 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            transition: 0.3s;
+        }
+        .mod-card:hover { border-color: var(--accent); transform: scale(1.01); }
+        
+        .mod-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .number { background: var(--accent); color: #000; font-weight: bold; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+        h2 { margin: 0; font-size: 1.6rem; color: #fff; }
+
+        .desc { color: #8b949e; margin-bottom: 20px; }
+        
+        .download-area { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; transition: 0.2s; font-size: 14px; border: none; cursor: pointer; display: inline-block; }
+        .btn-green { background: var(--green); color: white; }
+        .btn-green:hover { background: #2ea043; }
+        .btn-gray { background: #30363d; color: #c9d1d9; border: 1px solid var(--border); }
+
+        .status-box {
+            background: rgba(88, 166, 255, 0.05);
+            border: 1px dashed var(--accent);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .status-box p { margin: 5px 0; color: #c9d1d9; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.3; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>ForgeHub</h1>
-        <p>Лучшие моды для Minecraft 1.20.1 • Forge</p>
-    </header>
-    <div class="container">
-        <div class="mod-card">
-            <h2>Alex’s Mobs</h2>
-            <p>Добавляет десятки новых существ и делает мир Minecraft живым.</p>
-            <a href="#" class="btn">Скачать мод</a>
-        </div>
-        <div class="mod-card">
-            <h2>Create</h2>
-            <p>Механизмы, поезда и полная автоматизация.</p>
-            <a href="#" class="btn">Скачать мод</a>
+
+<header>
+    <div class="mc-icon"></div>
+    <h1>TOP 5 SURVIVAL MODS</h1>
+    <p style="opacity: 0.7;">Лучшая подборка для 1.20.1 Forge</p>
+</header>
+
+<div class="container">
+
+    <div class="mod-card">
+        <div class="mod-header"><div class="number">1</div><h2>Alex's Mobs</h2></div>
+        <p class="desc">Огромное количество новых существ. Сделайте мир живым!</p>
+        <div class="download-area">
+            <a href="alexsmobs-1.22.9-1.20.1.jar" class="btn btn-green" download>Скачать Мод</a>
+            <a href="citadel-2.6.0-1.20.1.jar" class="btn btn-gray" download>Нужна Citadel</a>
         </div>
     </div>
-    <footer>
-        © 2026 ForgeHub • Minecraft 1.20.1 Forge
-    </footer>
+
+    <div class="mod-card">
+        <div class="mod-header"><div class="number">2</div><h2>FallingTree</h2></div>
+        <p class="desc">Быстрая рубка деревьев. Реалистичное падение ствола.</p>
+        <div class="download-area">
+            <a href="FallingTree-1.20.1-4.3.4.jar" class="btn btn-green" download>Скачать Мод</a>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <div class="mod-header"><div class="number">3</div><h2>Create</h2></div>
+        <p class="desc">Лучший тех-мод. Механизмы, поезда и автоматизация.</p>
+        <div class="download-area">
+            <a href="create-1.20.1-6.0.8.jar" class="btn btn-green" download>Скачать Мод</a>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <div class="mod-header"><div class="number">4</div><h2>AppleSkin</h2></div>
+        <p class="desc">Показывает насыщение и пользу еды в интерфейсе.</p>
+        <div class="download-area">
+            <a href="appleskin-forge-mc1.20.1-2.5.1.jar" class="btn btn-green" download>Скачать Мод</a>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <div class="mod-header"><div class="number">5</div><h2>Geckolib</h2></div>
+        <p class="desc">Библиотека анимаций. Необходима для работы многих модов.</p>
+        <div class="download-area">
+            <a href="geckolib-forge-1.20.1-4.8.2.jar" class="btn btn-green" download>Скачать Либу</a>
+        </div>
+    </div>
+
+    <div class="status-box">
+        <p><strong>Обновления будут выходить регулярно.</strong></p>
+        <p>Наши сотрудники работают с сайтом — это пока что тестовая версия.</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Сборка 1.20.1 Forge
+</footer>
+
 </body>
 </html>
