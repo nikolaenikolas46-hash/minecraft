@@ -1,140 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35LNB8Z8XR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-35LNB8Z8XR');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Топ-5 Модов 1.20.1 Forge</title>
+    <title>ForgeHub — ТОП 1.20.1 Forge</title>
+    
+    <meta name="google-site-verification" content="iNxMvFZ6ODt7O-Y-v-zC7y-Zp7vS6M" />
+
     <style>
-        :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --accent: #58a6ff;
-            --green: #238636;
-            --text: #e6edf3;
-            --border: #30363d;
-            --grass: #559028;
-            --dirt: #79553a;
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
-        
-        .mc-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--dirt);
-            position: relative;
-            margin: 0 auto 15px;
-            border: 3px solid #000;
-            box-shadow: inset 0 10px 0 var(--grass);
-        }
-        .mc-icon::after {
-            content: '';
-            position: absolute;
-            top: 10px; left: 0; width: 100%; height: 5px;
-            background: #467520;
-        }
-
+        :root { --bg: #0d1117; --card: #161b22; --accent: #58a6ff; --green: #238636; --red: #da3633; --text: #e6edf3; --border: #30363d; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; padding-bottom: 50px; }
         header { background: #161b22; padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--accent); }
-        h1 { color: var(--accent); margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        
+        h1 { color: var(--accent); margin: 0; text-transform: uppercase; }
         .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .section-title { border-left: 5px solid var(--accent); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; }
+        .horror-title { border-color: var(--red); color: var(--red); }
+        .mod-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 20px; }
+        h2 { margin: 0; font-size: 1.5rem; color: #fff; }
+        .desc { color: #8b949e; margin-bottom: 15px; font-size: 0.95rem; }
+        .desc b { color: var(--text); }
         
-        .mod-card { 
-            background: var(--card); 
-            border: 1px solid var(--border); 
-            border-radius: 12px; 
-            padding: 25px; 
-            margin-bottom: 25px; 
-            transition: 0.3s;
+        /* Стили для Дисклеймера */
+        .disclaimer-box { 
+            background: rgba(218, 54, 51, 0.1); 
+            border: 2px solid var(--red); 
+            color: #ff7b72; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 30px 0; 
+            text-align: center; 
         }
-        .mod-card:hover { border-color: var(--accent); transform: scale(1.01); }
-        
-        .mod-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .number { background: var(--accent); color: #000; font-weight: bold; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
-        h2 { margin: 0; font-size: 1.6rem; color: #fff; }
+        .disclaimer-box h3 { margin: 0 0 10px 0; text-transform: uppercase; }
 
-        .desc { color: #8b949e; margin-bottom: 20px; }
-        
-        .download-area { display: flex; gap: 12px; flex-wrap: wrap; }
-        .btn { text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; transition: 0.2s; font-size: 14px; border: none; cursor: pointer; display: inline-block; }
-        .btn-green { background: var(--green); color: white; }
-        .btn-green:hover { background: #2ea043; }
-        .btn-gray { background: #30363d; color: #c9d1d9; border: 1px solid var(--border); }
-
-        .status-box {
-            background: rgba(88, 166, 255, 0.05);
-            border: 1px dashed var(--accent);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .status-box p { margin: 5px 0; color: #c9d1d9; }
-
-        footer { text-align: center; padding: 40px; opacity: 0.3; font-size: 0.8rem; }
+        .btn { text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; display: inline-block; color: white; transition: 0.2s; }
+        .btn-green { background: var(--green); }
+        .btn-red { background: var(--red); }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+        footer { text-align: center; padding: 40px; opacity: 0.3; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="mc-icon"></div>
-    <h1>TOP 5 SURVIVAL MODS</h1>
-    <p style="opacity: 0.7;">Лучшая подборка для 1.20.1 Forge</p>
+    <h1>ForgeHub 1.20.1</h1>
+    <p>Твоя идеальная сборка модов</p>
 </header>
 
 <div class="container">
 
+    <h2 class="section-title">Топ 5 Выживание</h2>
+
     <div class="mod-card">
-        <div class="mod-header"><div class="number">1</div><h2>Alex's Mobs</h2></div>
-        <p class="desc">Огромное количество новых существ. Сделайте мир живым!</p>
-        <div class="download-area">
-            <a href="alexsmobs-1.22.9-1.20.1.jar" class="btn btn-green" download>Скачать Мод</a>
-            <a href="citadel-2.6.0-1.20.1.jar" class="btn btn-gray" download>Нужна Citadel</a>
-        </div>
+        <h2>1. Alex's Mobs</h2>
+        <p class="desc"><b>Описание:</b> Добавляет более 80 новых мобов в игру. Каждый имеет уникальное поведение, дроп и анимации. От маленьких мух до огромных боссов.</p>
+        <a href="alexsmobs-1.22.9-1.20.1.jar" class="btn btn-green" download>Скачать .jar</a>
     </div>
 
     <div class="mod-card">
-        <div class="mod-header"><div class="number">2</div><h2>FallingTree</h2></div>
-        <p class="desc">Быстрая рубка деревьев. Реалистичное падение ствола.</p>
-        <div class="download-area">
-            <a href="FallingTree-1.20.1-4.3.4.jar" class="btn btn-green" download>Скачать Мод</a>
-        </div>
+        <h2>2. FallingTree</h2>
+        <p class="desc"><b>Описание:</b> Позволяет моментально срубать все дерево, ударив только по нижнему блоку. Теперь не нужно строить столбы из земли, чтобы дотянуться до верхушки дуба.</p>
+        <a href="FallingTree-1.20.1-4.3.4.jar" class="btn btn-green" download>Скачать .jar</a>
     </div>
 
     <div class="mod-card">
-        <div class="mod-header"><div class="number">3</div><h2>Create</h2></div>
-        <p class="desc">Лучший тех-мод. Механизмы, поезда и автоматизация.</p>
-        <div class="download-area">
-            <a href="create-1.20.1-6.0.8.jar" class="btn btn-green" download>Скачать Мод</a>
-        </div>
+        <h2>3. Create</h2>
+        <p class="desc"><b>Описание:</b> Глобальный технический мод. Поезда, заводы, ветряные мельницы и бесконечные возможности для автоматизации всего, что видишь.</p>
+        <a href="create-1.20.1-6.0.8.jar" class="btn btn-green" download>Скачать .jar</a>
     </div>
 
     <div class="mod-card">
-        <div class="mod-header"><div class="number">4</div><h2>AppleSkin</h2></div>
-        <p class="desc">Показывает насыщение и пользу еды в интерфейсе.</p>
-        <div class="download-area">
-            <a href="appleskin-forge-mc1.20.1-2.5.1.jar" class="btn btn-green" download>Скачать Мод</a>
-        </div>
+        <h2>4. AppleSkin</h2>
+        <p class="desc"><b>Описание:</b> Визуальный помощник. Показывает, насколько восстановится твой голод и насыщение, когда ты держишь еду в руках.</p>
+        <a href="appleskin-forge-mc1.20.1-2.5.1.jar" class="btn btn-green" download>Скачать .jar</a>
     </div>
 
     <div class="mod-card">
-        <div class="mod-header"><div class="number">5</div><h2>Geckolib</h2></div>
-        <p class="desc">Библиотека анимаций. Необходима для работы многих модов.</p>
-        <div class="download-area">
-            <a href="geckolib-forge-1.20.1-4.8.2.jar" class="btn btn-green" download>Скачать Либу</a>
-        </div>
+        <h2>5. Geckolib</h2>
+        <p class="desc"><b>Описание:</b> Техническая библиотека. Необходима для работы анимаций в Alex's Mobs и хоррор-модах. Без нее игра просто не запустится.</p>
+        <a href="geckolib-forge-1.20.1-4.8.2.jar" class="btn btn-green" download>Скачать .jar</a>
     </div>
 
-    <div class="status-box">
-        <p><strong>Обновления будут выходить регулярно.</strong></p>
-        <p>Наши сотрудники работают с сайтом — это пока что тестовая версия.</p>
+    <hr style="border: 0; border-top: 1px solid var(--border); margin: 50px 0;">
+
+    <h2 class="section-title horror-title">Топ 3 Хоррор мода</h2>
+
+    <div class="disclaimer-box">
+        <h3>⚠️ ВНИМАНИЕ: ДИСКЛЕЙМЕР</h3>
+        <p>Эти моды не для слабонервных. Они добавляют в игру скримеры, пугающие звуки и атмосферу безысходности. Автор сайта не несет ответственности за твои сожженные нервные клетки!</p>
+    </div>
+
+    <div class="mod-card">
+        <h2>1. From the Caves</h2>
+        <p class="desc"><b>Что делает:</b> Вводит в игру бледное существо, которое обитает в пещерах. Оно не просто нападает, оно следит за тобой из темноты и издает жуткие вопли.</p>
+        <a href="from_the_caves-0.6.926-forge-1.20.1.jar" class="btn btn-red" download>Скачать Хоррор</a>
+    </div>
+
+    <div class="mod-card">
+        <h2>2. The Mimic</h2>
+        <p class="desc"><b>Что делает:</b> Коварный монстр, который притворяется звуками животных (овец, коров) или даже плачем, чтобы заманить тебя в темный угол и убить.</p>
+        <a href="themimic_er-1.20.1-1.7.0.jar" class="btn btn-red" download>Скачать Хоррор</a>
+    </div>
+
+    <div class="mod-card">
+        <h2>3. The Knocker</h2>
+        <p class="desc"><b>Что делает:</b> Этот монстр приходит ночью к твоему дому. Ты будешь слышать отчетливый стук в дверь и окна. Если откроешь — пути назад не будет.</p>
+        <a href="the_knocker-1.5.0-forge-1.20.1.jar" class="btn btn-red" download>Скачать Хоррор</a>
     </div>
 
 </div>
 
-<footer>
-    &copy; 2026 Сборка 1.20.1 Forge
-</footer>
-
+<footer>© 2026 ForgeHub • Удачи в выживании!</footer>
 </body>
 </html>
